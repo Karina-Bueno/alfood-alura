@@ -1,8 +1,9 @@
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import { useEffect, useState } from "react"
 import IRestaurante from "../../../interfaces/IRestaurante"
-import { Link } from "react-router-dom"
 import http from "../../../http"
+
+import { Link as RouterLink } from "react-router-dom";
 
 const AdministracaoRestaurantes = () => {
 
@@ -43,7 +44,7 @@ const AdministracaoRestaurantes = () => {
 							{restaurante.nome}
 						</TableCell>
 						<TableCell>
-							[<Link to={`/admin/restaurantes/${restaurante.id}`}>editar</Link>]
+							<RouterLink to={`/admin/restaurantes/${restaurante.id}`}>editar</RouterLink>
 						</TableCell>
 						<TableCell>
 							<Button variant="outlined" color="error" onClick={() => excluir(restaurante)}>Excluir</Button>
@@ -54,5 +55,4 @@ const AdministracaoRestaurantes = () => {
 		</TableContainer>
 	)
 }
-
-export default AdministracaoRestaurantes
+export default AdministracaoRestaurantes;

@@ -28,4 +28,4 @@ const Restaurante = ({ restaurante }: RestauranteProps) => {
   </section>)
 }
 
-export default Restaurante
+export default Restaurante;
